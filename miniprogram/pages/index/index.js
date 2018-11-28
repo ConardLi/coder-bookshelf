@@ -49,7 +49,7 @@ Page({
   onGetOpenid: function() {
     // 调用云函数
     wx.cloud.callFunction({
-      name: 'login',
+      name: '',
       data: {},
       success: res => {
         console.log('[云函数] [login] user openid: ', res.result.openid)

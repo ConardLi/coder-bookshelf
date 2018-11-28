@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/search/search",
     "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
@@ -14,5 +15,22 @@
     "navigationBarBackgroundColor": "#F6F6F6",
     "navigationBarTitleText": "程序员书架",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "images/page/检索1.png",
+        "selectedIconPath": "images/page/检索.png",
+        "text": "检索"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/page/书架1.png",
+        "selectedIconPath": "images/page/书架.png",
+        "text": "示例"
+      }
+    ]
   }
 }

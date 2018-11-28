@@ -49,7 +49,7 @@
   <view class="guide" wx:if="{{step === 3}}">
     <text class="headline">新增记录</text>
     <text class="p">1. 打开 pages/databaseGuide/databaseGuide.js 文件，定位到 onAdd 方法</text>
-    <text class="p">2. 把注释掉的代码解除注释</text>
+    <text class="p">2. 把注 释掉的代码解除注释</text>
     <image class="code-image" src="../../images/code-db-onAdd.png" mode="aspectFit"></image>
     <text class="p">3. onAdd 方法会往 counters 集合新增一个记录，新增如下格式的一个 JSON 记录</text>
     <text class="code">
