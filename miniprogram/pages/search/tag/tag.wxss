@@ -2,19 +2,25 @@
 
 .container{
   width: 60px;
-  height: 80px;
-  padding-top: 10px;
+  height: 60px;
+  padding-top: 5px;
   box-shadow: 4px 4px 2px  #888888;
   border: 1px solid rgb(122, 122, 122);
   display: inline-block;
   margin: 10px;
+  position: relative;
 }
 
 .icon{
   height: 40px;
   width: 40px;
+  margin-left: 10px;
 }
 
 .tagName{
   font-size: 14px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 0px;
 }

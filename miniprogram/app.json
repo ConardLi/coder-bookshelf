@@ -23,7 +23,7 @@
         "pagePath": "pages/search/search",
         "iconPath": "images/page/检索1.png",
         "selectedIconPath": "images/page/检索.png",
-        "text": "检索"
+        "text": "分类"
       },
       {
         "pagePath": "pages/index/index",
