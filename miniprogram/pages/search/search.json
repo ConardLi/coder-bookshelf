@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "Tag": "tag/tag",
+    "Tag": "../../component/tag/tag",
     "wux-search-bar": "../../component/search-bar/index",
     "wux-tabs": "../../component/tabs/index",
     "wux-tab": "../../component/tab/index",

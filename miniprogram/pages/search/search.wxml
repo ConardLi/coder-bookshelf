@@ -10,7 +10,7 @@
     <block>
       <swiper-item>
         <view class="content">
-          <Tag></Tag>
+          <Tag name="java"></Tag>
         </view>
       </swiper-item>
       <swiper-item>

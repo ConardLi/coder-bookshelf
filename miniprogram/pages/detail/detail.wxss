@@ -1,0 +1,8 @@
+/* miniprogram/pages/detail/detail.wxss */
+
+.bookImg{
+  width: 160px;
+  height: 208px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px  #888888;
+}

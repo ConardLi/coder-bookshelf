@@ -1,0 +1,8 @@
+<!--miniprogram/pages/bookList/bookList.wxml-->
+<view>
+<book-item></book-item>
+<book-item></book-item>
+<book-item></book-item>
+<book-item></book-item>
+<book-item></book-item>
+</view>

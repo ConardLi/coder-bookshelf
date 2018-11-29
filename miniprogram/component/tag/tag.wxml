@@ -1,0 +1,5 @@
+<!--pages/search/tag/tag.wxml-->
+<view class='container' bindtap="handleClick">
+  <image class='icon' src='../../images/tag/java.png'></image>
+  <text class='tagName'>{{ name }}</text>
+</view>

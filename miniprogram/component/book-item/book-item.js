@@ -1,4 +1,4 @@
-// pages/search/tag/tag.js
+// component/book-Item/book-item.js
 Component({
   /**
    * 组件的属性列表
