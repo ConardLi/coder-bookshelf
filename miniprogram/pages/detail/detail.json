@@ -1,1 +1,9 @@
-{}
+{
+      "usingComponents": {
+        "wux-toast": "../../component/toast/index",
+        "wux-loading": "../../component/loading/index",
+        "wux-progress": "../../component/progress/index",
+        "wux-row": "../../component/row/index",
+        "wux-col": "../../component/col/index"
+      }
+}

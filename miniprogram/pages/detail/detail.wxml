@@ -37,16 +37,28 @@
   <text class='con3'>原型和原型链</text>
 </view>
 
+<wux-toast id="wux-toast" />
+<wux-loading id="wux-loading" />
+<wux-row class="pcon" style="display:{{showPro?'block':'none'}};">
+  <wux-row style="margin:10px">
+    <text class="pTitle">正在下载书籍 </text>
+    <text class='pText'>{{percent}}%</text>
+    <wux-col class="progress" span="10" offset="1">
+      <wux-progress status="progress" percent="{{ percent  }}" />
+    </wux-col>
+  </wux-row>
+</wux-row>
 
 <view class='foorter'>
-  <view class='like' bindtap='handleLike'>
+  <button class='like' bindtap='handleLike'>
     <image class='likeIcon' src="../../images/page/{{like?'收藏1':'收藏2'}}.png"></image>
     <text class='likeText'>{{like?'已收藏':'收藏'}}</text>
-  </view>
-  <view class='read'>
+  </button>
+  <view bindtap='handleRead' class='read'>
     开始阅读
   </view>
-  <view class='share'>
-    分享
-  </view>
+  <button class='share' open-type='share'>
+    <image class='likeIcon' src="../../images/page/分享.png"></image>
+    <text class='likeText'>分享</text>
+  </button>
 </view>

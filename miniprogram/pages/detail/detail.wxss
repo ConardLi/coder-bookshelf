@@ -24,7 +24,7 @@
   position: absolute;
   height: 50px;
   width: 100%;
-  border-top: 1px solid #cfcece;
+  /* border-top: 1px solid #cfcece; */
   bottom: 0px;
   text-align: center;
   line-height: 50px;
@@ -36,10 +36,11 @@
   width: 100px;
   right: 0px;
   position: absolute;
+  border-radius: 0px;
 }
 
 .read {
-  background: rgb(250, 150, 84);
+  background: rgb(255, 143, 69);
   height: 50px;
   position: absolute;
   left: 100px;
@@ -97,3 +98,28 @@
   position: absolute;
   left: 40px;
 }
+
+.pcon{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 230px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.568);
+  text-align: center;
+}
+
+.pTitle{
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 100px;
+}
+
+.pText{
+  font-size: 12px;
+  color: #d6d6d6;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
