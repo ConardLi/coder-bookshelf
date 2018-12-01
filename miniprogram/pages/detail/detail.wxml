@@ -7,45 +7,41 @@
 </view>
 
 <view class='prop'>
-  <text class='propName'>
-    书名：
-  </text>
-  <text class='vaule'>
-   JavaScript高级程序设计（第3版）
-    </text>
+  <image class='icon' src='../../images/page/book.png'></image>
+  <text class='con2'>名称：</text>
+  <text class='con3'>JavaScript高级程序设计（第3版）</text>
 </view>
 
 <view class='prop'>
-  <text class='propName'>
-    书名：
-    </text>
-  <text class='vaule'>
-   JavaScript高级程序设计（第3版）
-    </text>
+  <image class='icon' src='../../images/page/作者.png'></image>
+  <text class='con2'>作者：</text>
+  <text class='con3'>龙玉溪</text>
 </view>
 
 <view class='prop'>
-  <text class='propName'>
-    书名：
-    </text>
-  <text class='vaule'>
-   JavaScript高级程序设计（第3版）
-    </text>
+  <image class='icon' src='../../images/page/分类.png'></image>
+  <text class='con2'>分类：</text>
+  <text class='con3'>书籍</text>
 </view>
 
 <view class='prop'>
-  <text class='propName'>
-    书名：
-    </text>
-  <text class='vaule'>
-   JavaScript高级程序设计（第3版）
-    </text>
+  <image class='icon' src='../../images/page/标签.png'></image>
+  <text class='con2'>标签：</text>
+  <text class='con3'>前端，js</text>
+</view>
+
+
+<view class='prop'>
+  <image class='icon' src='../../images/page/推荐.png'></image>
+  <text class='con2'>推荐阅读：</text>
+  <text class='con3'>原型和原型链</text>
 </view>
 
 
 <view class='foorter'>
-  <view class='like'>
-    收藏
+  <view class='like' bindtap='handleLike'>
+    <image class='likeIcon' src="../../images/page/{{like?'收藏1':'收藏2'}}.png"></image>
+    <text class='likeText'>{{like?'已收藏':'收藏'}}</text>
   </view>
   <view class='read'>
     开始阅读
