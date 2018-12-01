@@ -1,13 +1,56 @@
 <view class='con'>
+
   <view class='imgcon'>
     <image class='bookImg' src='../../images/book/javascript高级程序设计.jpg'></image>
   </view>
-  <view class='txtcon'>
-    <text class='name'>
-  JavaScript高级程序设计（第3版）
+
+</view>
+
+<view class='prop'>
+  <text class='propName'>
+    书名：
   </text>
-    <text class='tag'>
-    作者：钟大俊   标签：前端 js 
+  <text class='vaule'>
+   JavaScript高级程序设计（第3版）
     </text>
+</view>
+
+<view class='prop'>
+  <text class='propName'>
+    书名：
+    </text>
+  <text class='vaule'>
+   JavaScript高级程序设计（第3版）
+    </text>
+</view>
+
+<view class='prop'>
+  <text class='propName'>
+    书名：
+    </text>
+  <text class='vaule'>
+   JavaScript高级程序设计（第3版）
+    </text>
+</view>
+
+<view class='prop'>
+  <text class='propName'>
+    书名：
+    </text>
+  <text class='vaule'>
+   JavaScript高级程序设计（第3版）
+    </text>
+</view>
+
+
+<view class='foorter'>
+  <view class='like'>
+    收藏
+  </view>
+  <view class='read'>
+    开始阅读
+  </view>
+  <view class='share'>
+    分享
   </view>
 </view>

@@ -1,7 +1,7 @@
 <!--component/book-Item/book-item.wxml-->
 <view class='con'>
   <view class='imgcon'>
-    <image class='bookImg' src='../../images/book/javascript高级程序设计.jpg'></image>
+    <image class='bookImg' src='/images/book/javascript高级程序设计.jpg'></image>
   </view>
   <view class='txtcon'>
     <text class='name'>

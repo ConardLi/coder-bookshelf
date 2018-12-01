@@ -1,8 +1,72 @@
 /* miniprogram/pages/detail/detail.wxss */
 
-.bookImg{
+.con {
+  background-color: #f6f6f6;
+  height: 230px;
+  position: relative;
+}
+
+.imgcon {
+  /* margin-top: 20px; */
+  /* padding-left: 20px; */
+  width: 160px;
+  margin: 0 auto;
+}
+
+.bookImg {
   width: 160px;
   height: 208px;
   border-radius: 5px;
-  box-shadow: 5px 5px 2px  #888888;
+  box-shadow: 5px 5px 2px #888;
+}
+
+.foorter {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  border-top: 1px solid #cfcece;
+  bottom: 0px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+}
+
+.share {
+  height: 50px;
+  width: 100px;
+  right: 0px;
+  position: absolute;
+}
+
+.read {
+  background: rgb(250, 150, 84);
+  height: 50px;
+  position: absolute;
+  left: 100px;
+  right: 100px;
+  color: white;
+}
+
+.like {
+  height: 50px;
+  width: 100px;
+  left: 0px;
+  position: absolute;
+}
+
+
+.prop{
+  height: 50px;
+  border-bottom: 1px solid #f6f6f6;
+  /* line-height: 50px; */
+  font-size: 14px;
+}
+
+.propName{
+  width: 50px;
+  float: left;
+}
+
+.vaule{
+  float: left;
 }
