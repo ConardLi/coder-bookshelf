@@ -1,7 +1,7 @@
 <view class='con'>
 
   <view class='imgcon'>
-    <image class='bookImg' src='../../images/book/javascript高级程序设计.jpg'></image>
+    <image wx:if="{{data.name}}" class='bookImg' src='{{pre}}/book/{{data.name}}.jpg'></image>
   </view>
 
 </view>
@@ -9,13 +9,13 @@
 <view class='prop'>
   <image class='icon' src='../../images/page/book.png'></image>
   <text class='con2'>名称：</text>
-  <text class='con3'>JavaScript高级程序设计（第3版）</text>
+  <text class='con3'>{{data.name}}</text>
 </view>
 
 <view class='prop'>
   <image class='icon' src='../../images/page/作者.png'></image>
   <text class='con2'>作者：</text>
-  <text class='con3'>龙玉溪</text>
+  <text class='con3'>{{data.author}}</text>
 </view>
 
 <view class='prop'>
@@ -27,7 +27,7 @@
 <view class='prop'>
   <image class='icon' src='../../images/page/标签.png'></image>
   <text class='con2'>标签：</text>
-  <text class='con3'>前端，js</text>
+  <text class='con3'>{{data.tag}}</text>
 </view>
 
 
@@ -52,10 +52,10 @@
 <view class='foorter'>
   <button class='like' bindtap='handleLike'>
     <image class='likeIcon' src="../../images/page/{{like?'收藏1':'收藏2'}}.png"></image>
-    <text class='likeText'>{{like?'已收藏':'收藏'}}</text>
+    <text open-type="getUserInfo" class='likeText'>{{like?'已收藏':'收藏'}}</text>
   </button>
   <view bindtap='handleRead' class='read'>
-    开始阅读
+    {{readed?"继续阅读":"开始阅读"}}
   </view>
   <button class='share' open-type='share'>
     <image class='likeIcon' src="../../images/page/分享.png"></image>

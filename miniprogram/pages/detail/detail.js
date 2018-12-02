@@ -5,7 +5,6 @@ import {
 
 const app = getApp();
 
-// miniprogram/pages/detail/detail.js
 Page({
 
   /**
@@ -15,7 +14,9 @@ Page({
     like: false,
     percent: 0,
     showPro: false,
-    pre: app.globalData.pre
+    pre: app.globalData.pre,
+    data: {},
+    readed:""
   },
 
   /**
@@ -25,13 +26,32 @@ Page({
     wx.showShareMenu({
       withShareTicket: true
     });
-    console.log(JSON.parse(options.data));
+    const pData = JSON.parse(options.data);
+    const readed = wx.getStorageSync(pData.name);
+    this.setData({
+      data: pData,
+      readed: readed
+    })
   },
 
   /**
    * 点击收藏
    */
   handleLike: function() {
+    // 获取用户信息
+    // wx.getSetting({
+    //   success: res => {
+    //     console.log(res);
+    //     if (res.authSetting['scope.userInfo']) {
+    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
+    //       wx.getUserInfo({
+    //         success: res => {
+    //           console.log(res);
+    //         }
+    //       })
+    //     }
+    //   }
+    // })
     this.setData({
       like: !this.data.like
     })
@@ -41,7 +61,7 @@ Page({
    * 阅读
    */
   handleRead: function() {
-    const path = wx.getStorageSync('tempFilePath');
+    const path = wx.getStorageSync(this.data.data.name);
     if (path) {
       this.openFile(path);
     } else {
@@ -49,10 +69,10 @@ Page({
         showPro: true
       })
       const downloadTask = wx.downloadFile({
-        url: 'https://636f-coder-bookshelf-db68e0-1258175022.tcb.qcloud.la/pdf/React in Action.pdf?sign=a7e67f4fc47a3a23ed80f0f9cac44ab7&t=1543670390',
+        url: app.globalData.filePre + "/book/" + this.data.data.name + ".pdf",
         success: (res) => {
           wx.setStorage({
-            key: "tempFilePath",
+            key: this.data.data.name,
             data: res.tempFilePath
           })
           this.openFile(res.tempFilePath);
@@ -96,7 +116,7 @@ Page({
         $wuxLoading().hide();
       },
       fail: () => {
-        wx.removeStorageSync('tempFilePath');
+        wx.removeStorageSync(this.data.data.name);
         this.handleRead();
       }
     })

@@ -11,7 +11,8 @@ App({
     }
 
     this.globalData = {
-      pre: 'https://lsqimg-1257917459.cos-website.ap-beijing.myqcloud.com'
+      pre: 'https://lsqimg-1257917459.cos-website.ap-beijing.myqcloud.com',
+      filePre:'https://lsqfile-1257917459.cos.ap-beijing.myqcloud.com'
     }
   }
 })
