@@ -1,6 +1,6 @@
 <view class="page">
 
-  <wux-search-bar placeholder="点击搜索想要的内容" clear />
+  <wux-search-bar  bind:confirm="handelSearch" placeholder="点击搜索想要的内容" clear />
 
   <wux-tabs wux-class="bordered" controlled current="{{ current }}" bindchange="onTabsChange">
     <block>

@@ -43,6 +43,17 @@ Page({
   },
 
   /**
+   * 查询
+   */
+  handelSearch: function(e) {
+    if (e.detail.value){
+      wx.navigateTo({
+        url: '../../pages/bookList/bookList?name=' + e.detail.value,
+      })
+    }
+  },
+
+  /**
    * 点击tab 
    */
   onTabsChange(e) {
