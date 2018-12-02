@@ -21,6 +21,16 @@ Component({
    * 组件的方法列表
    */
   methods: {
+    /**
+     * 跳转到详情页
+     */
+    handleDetail: function() {
+      wx.navigateTo({
+        url: '../../pages/detail/detail?data=' + this.properties.data,
+      })
+    }
+  },
 
-  }
+
+
 })
