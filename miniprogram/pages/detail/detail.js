@@ -128,7 +128,6 @@ Page({
    * 打开文件
    */
   openFile(src) {
-    console.log(1);
     this.setData({
       showPro: false,
       percent: 0
@@ -139,7 +138,6 @@ Page({
     wx.openDocument({
       filePath: src,
       success: (res) => {
-        console.log(2);
         $wuxLoading().hide();
       },
       fail:()=>{
