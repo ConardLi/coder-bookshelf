@@ -1,4 +1,7 @@
 // pages/search/tag/tag.js
+
+const app = getApp();
+
 Component({
   /**
    * 组件的属性列表
@@ -14,7 +17,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-    pre: 'https://lsqimg-1257917459.cos-website.ap-beijing.myqcloud.com'
+    pre: app.globalData.pre
   },
 
   /**

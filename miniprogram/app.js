@@ -10,6 +10,8 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {
+      pre: 'https://lsqimg-1257917459.cos-website.ap-beijing.myqcloud.com'
+    }
   }
 })

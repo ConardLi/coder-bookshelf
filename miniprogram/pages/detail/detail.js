@@ -3,6 +3,8 @@ import {
   $wuxLoading
 } from '../../component/index'
 
+const app = getApp();
+
 // miniprogram/pages/detail/detail.js
 Page({
 
@@ -12,7 +14,8 @@ Page({
   data: {
     like: false,
     percent: 0,
-    showPro: false
+    showPro: false,
+    pre: app.globalData.pre
   },
 
   /**
@@ -21,8 +24,8 @@ Page({
   onLoad: function(options) {
     wx.showShareMenu({
       withShareTicket: true
-    }); 
-    console.log(options.data);
+    });
+    console.log(JSON.parse(options.data));
   },
 
   /**
@@ -92,7 +95,7 @@ Page({
       success: (res) => {
         $wuxLoading().hide();
       },
-      fail:()=>{
+      fail: () => {
         wx.removeStorageSync('tempFilePath');
         this.handleRead();
       }
