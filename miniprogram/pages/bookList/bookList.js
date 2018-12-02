@@ -10,7 +10,7 @@ Page({
    */
   data: {
     list: [],
-    no:false
+    no: false
   },
 
   /**
@@ -18,31 +18,34 @@ Page({
    */
   onLoad: function(options) {
     if (options.tag) {
-      this.getDataByTag(options.tag);
+      this.getDataByTag(options.tag, 'tag');
+    }
+    if (options.name) {
+      this.getDataByTag(options.name, 'name');
     }
   },
 
   /**
    * 根据标签查询数据列表
    */
-  getDataByTag: function(value) {
+  getDataByTag: function(value, searchType) {
     $wuxLoading().show({
       text: '正在努力的找',
     })
     const db = wx.cloud.database()
     db.collection('book').where({
-      tag: db.RegExp({
+      [searchType]: db.RegExp({
         regexp: value,
         options: 'i',
       })
     }).get().then(res => {
-      if(res.data.length>0){
+      if (res.data.length > 0) {
         this.setData({
           list: res.data
         });
-      }else{
+      } else {
         this.setData({
-          no:true
+          no: true
         })
       };
       $wuxLoading().hide();
