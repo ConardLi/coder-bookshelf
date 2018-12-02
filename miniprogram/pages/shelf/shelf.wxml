@@ -1,0 +1,18 @@
+<view class='container'>
+
+  <view class='noBook' style="display:{{list.length==0?'flex':'none'}};">
+    <image class='icon' src='../../images/page/书籍.png'></image>
+    <text class='noText'>书架空空荡荡~</text>
+    <wux-button class='noBtn' size="small" outline type="positive">
+      <text space="ensp" bindlongtap='toSearch'>   去找书   </text>
+    </wux-button>
+  </view>
+
+  <view class='book' style="display:{{list.length>0?'flex':'none'}};">
+    <view class='bookContainer' wx:for="{{list}}" wx:for-item="item">
+      <image class='bookImg' src='../../images/book/{{item.name}}.jpg'></image>
+      <text class='bookText'>{{item.name}}</text>
+    </view>
+  </view>
+
+</view>

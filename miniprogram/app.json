@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/shelf/shelf",
     "pages/detail/detail",
     "pages/bookList/bookList",
     "pages/search/search",
@@ -10,7 +11,6 @@
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
     "pages/chooseLib/chooseLib"
-    
   ],
   "window": {
     "backgroundColor": "#49afcd",
@@ -29,10 +29,10 @@
         "text": "分类"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/shelf/shelf",
         "iconPath": "images/page/书架1.png",
         "selectedIconPath": "images/page/书架.png",
-        "text": "示例"
+        "text": "书架"
       }
     ]
   }

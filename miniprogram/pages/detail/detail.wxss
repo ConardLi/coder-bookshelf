@@ -7,8 +7,6 @@
 }
 
 .imgcon {
-  /* margin-top: 20px; */
-  /* padding-left: 20px; */
   width: 160px;
   margin: 0 auto;
 }
