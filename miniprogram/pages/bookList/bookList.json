@@ -1,5 +1,7 @@
 {
     "usingComponents": {
+      "wux-loading": "../../component/loading/index",
+      "wux-button": "../../component/button/index",
       "book-item": "../../component/book-item/book-item"
     }
 }

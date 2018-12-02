@@ -141,7 +141,7 @@ Page({
         $wuxLoading().hide();
       },
       fail:()=>{
-        wx.removeStorageSync('tempFilePath')
+        wx.removeStorageSync('tempFilePath');
         this.handleRead();
       }
     })

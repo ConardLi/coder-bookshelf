@@ -1,3 +1,7 @@
+import {
+  $wuxLoading
+} from '../../component/index';
+
 // miniprogram/pages/bookList/bookList.js
 Page({
 
@@ -5,62 +9,43 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    list: [],
+    no:false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    console.log(options.name);
+  onLoad: function(options) {
+    if (options.tag) {
+      this.getDataByTag(options.tag);
+    }
   },
 
   /**
-   * 生命周期函数--监听页面初次渲染完成
+   * 根据标签查询数据列表
    */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  getDataByTag: function(value) {
+    $wuxLoading().show({
+      text: '正在努力的找',
+    })
+    const db = wx.cloud.database()
+    db.collection('book').where({
+      tag: db.RegExp({
+        regexp: value,
+        options: 'i',
+      })
+    }).get().then(res => {
+      if(res.data.length>0){
+        this.setData({
+          list: res.data
+        });
+      }else{
+        this.setData({
+          no:true
+        })
+      };
+      $wuxLoading().hide();
+    })
   }
 })

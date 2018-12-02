@@ -1,5 +1,7 @@
 <view class="page">
+
   <wux-search-bar placeholder="点击搜索想要的内容" clear />
+
   <wux-tabs wux-class="bordered" controlled current="{{ current }}" bindchange="onTabsChange">
     <block>
       <wux-tab key="tab1" title="书籍"></wux-tab>
@@ -10,15 +12,19 @@
     <block>
       <swiper-item>
         <view class="content">
-          <Tag name="java"></Tag>
+          <Tag wx:for="{{bookTags}}" wx:for-item="item" wx:key="{{item.id}}" name="{{item.name}}" type="{{item.type}}">
+          </Tag>
         </view>
       </swiper-item>
       <swiper-item>
         <view class="content">
-          <Tag></Tag>
-          <Tag></Tag>
+          <Tag wx:for="{{dataTags}}" wx:for-item="item" wx:key="{{item.id}}" name="{{item.name}}" type="{{item.type}}">
+          </Tag>
         </view>
       </swiper-item>
     </block>
   </swiper>
+
+  <wux-loading id="wux-loading" />
+
 </view>

@@ -3,6 +3,7 @@
     "Tag": "../../component/tag/tag",
     "wux-search-bar": "../../component/search-bar/index",
     "wux-tabs": "../../component/tabs/index",
+    "wux-loading": "../../component/loading/index",
     "wux-tab": "../../component/tab/index",
     "wux-badge": "../../component/badge/index"
   }

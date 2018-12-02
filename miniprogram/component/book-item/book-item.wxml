@@ -1,14 +1,14 @@
 <!--component/book-Item/book-item.wxml-->
 <view class='con'>
   <view class='imgcon'>
-    <image class='bookImg' src='/images/book/javascript高级程序设计.jpg'></image>
+    <image class='bookImg' src='{{pre}}/book/{{data.name}}.jpg'></image>
   </view>
   <view class='txtcon'>
     <text class='name'>
-  JavaScript高级程序设计（第3版）
+  {{data.name}}
   </text>
     <text class='tag'>
-    作者：钟大俊   标签：前端 js 
+    作者：{{data.author}}   标签：{{data.tag}}
     </text>
   </view>
 </view>

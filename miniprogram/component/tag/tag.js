@@ -14,7 +14,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    pre: 'https://lsqimg-1257917459.cos-website.ap-beijing.myqcloud.com'
   },
 
   /**
@@ -23,7 +23,7 @@ Component({
   methods: {
     handleClick: function() {
       wx.navigateTo({
-        url: '../../pages/bookList/bookList?name=' + this.properties.name,
+        url: '../../pages/bookList/bookList?tag=' + this.properties.name,
       })
     }
   },

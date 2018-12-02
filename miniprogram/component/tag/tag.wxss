@@ -9,6 +9,7 @@
   display: inline-block;
   margin: 10px;
   position: relative;
+  border-radius: 3px;
 }
 
 .icon{
