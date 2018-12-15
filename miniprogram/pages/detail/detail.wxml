@@ -62,3 +62,11 @@
     <text class='likeText'>分享</text>
   </button>
 </view>
+
+<!-- <view class='auth'>
+
+    <wux-button class='noBtn'  type="balanced" open-type='getUserInfo' bindtap='onGetUserInfo'>
+      <text space="ensp">   点击获取用户授权   </text>
+    </wux-button>
+
+</view> -->

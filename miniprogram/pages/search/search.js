@@ -3,7 +3,6 @@ import {
 } from '../../component/index';
 
 const tabs = ["tab1", "tab2"];
-const app = getApp();
 
 Page({
 
@@ -21,9 +20,6 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    wx.getUserInfo(function (userInfo) {
-      console.log(userInfo);
-    })
     this.initData('book', 'bookTags');
     this.initData('data', 'dataTags');
   },
@@ -50,7 +46,7 @@ Page({
    * 查询
    */
   handelSearch: function(e) {
-    if (e.detail.value){
+    if (e.detail.value) {
       wx.navigateTo({
         url: '../../pages/bookList/bookList?name=' + e.detail.value,
       })

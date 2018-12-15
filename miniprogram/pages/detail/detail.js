@@ -38,20 +38,25 @@ Page({
    * 点击收藏
    */
   handleLike: function() {
-    // 获取用户信息
-    // wx.getSetting({
-    //   success: res => {
-    //     console.log(res);
-    //     if (res.authSetting['scope.userInfo']) {
-    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-    //       wx.getUserInfo({
-    //         success: res => {
-    //           console.log(res);
-    //         }
-    //       })
-    //     }
-    //   }
-    // })
+    wx.getSetting({
+      success: res => {
+        console.log(1, res);
+        if (res.authSetting['scope.userInfo']) {
+          wx.login({
+            success: function (res) {
+              if (res.code) {
+                console.log(res);
+              } else {
+                console.log('获取用户登录态失败！' + res.errMsg)
+              }
+            }
+          });
+        } else {
+
+        }
+      }
+    })
+
     this.setData({
       like: !this.data.like
     })
@@ -120,5 +125,15 @@ Page({
         this.handleRead();
       }
     })
+  },
+
+  /**
+   * 点击获取授权
+   */
+  onGetUserInfo: function (e) {
+    console.log(e.detail)
+    if (!this.logged && e.detail.userInfo) {
+      
+    }
   }
 })

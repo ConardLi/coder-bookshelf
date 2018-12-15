@@ -4,6 +4,7 @@
         "wux-loading": "../../component/loading/index",
         "wux-progress": "../../component/progress/index",
         "wux-row": "../../component/row/index",
-        "wux-col": "../../component/col/index"
+        "wux-col": "../../component/col/index",
+        "wux-button": "../../component/button/index"
       }
 }
