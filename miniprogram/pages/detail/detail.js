@@ -112,16 +112,6 @@ Page({
     })
   },
 
-  /**
-   * 点击获取授权
-   */
-  onGetUserInfo: function(e) {
-    console.log(e.detail)
-    if (!this.logged && e.detail.userInfo) {
-
-    }
-  },
-
   queryLike: function() {
     const openid = app.globalData.openid;
     const bookName = this.data.data.name;
