@@ -1,0 +1,45 @@
+/* common/uesrAuth/userAuth.wxss */
+
+.outContainer {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.404);
+}
+
+.authContainer {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -150px;
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.authImg{
+  height: 50px;
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.authTxt{
+  font-size: 14px;
+  color: rgb(167, 167, 167);
+}
+
+.r-btn{
+  margin-top: 8px;
+  color:  rgb(167, 167, 167);
+}
+
+.a-btn{
+  margin-top: 8px;
+  color: white;
+  background-color: rgba(27, 172, 27, 0.733);
+}
