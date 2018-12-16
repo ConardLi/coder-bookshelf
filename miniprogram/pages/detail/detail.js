@@ -12,11 +12,12 @@ Page({
    */
   data: {
     like: false,
+    likeId: '',
     percent: 0,
     showPro: false,
     pre: app.globalData.pre,
     data: {},
-    readed:""
+    readed: ""
   },
 
   /**
@@ -31,35 +32,19 @@ Page({
     this.setData({
       data: pData,
       readed: readed
-    })
+    });
+    this.queryLike();
   },
 
   /**
    * 点击收藏
    */
   handleLike: function() {
-    wx.getSetting({
-      success: res => {
-        console.log(1, res);
-        if (res.authSetting['scope.userInfo']) {
-          wx.login({
-            success: function (res) {
-              if (res.code) {
-                console.log(res);
-              } else {
-                console.log('获取用户登录态失败！' + res.errMsg)
-              }
-            }
-          });
-        } else {
-
-        }
-      }
-    })
-
-    this.setData({
-      like: !this.data.like
-    })
+    if (!this.data.like) {
+      this.addBook();
+    } else {
+      this.removeBook();
+    }
   },
 
   /**
@@ -130,10 +115,112 @@ Page({
   /**
    * 点击获取授权
    */
-  onGetUserInfo: function (e) {
+  onGetUserInfo: function(e) {
     console.log(e.detail)
     if (!this.logged && e.detail.userInfo) {
-      
+
     }
+  },
+
+  queryLike: function() {
+    const openid = app.globalData.openid;
+    const bookName = this.data.data.name;
+    const db = wx.cloud.database();
+    db.collection('user-book').where({
+      _openid: openid,
+      bookName: bookName
+    }).get({
+      success: res => {
+        if (res.data.length > 0) {
+          const obj = res.data[0];
+          this.setData({
+            likeId: obj._id,
+            like: true
+          })
+        }
+      }
+    })
+  },
+
+  /**
+   * addbook
+   */
+  addBook: function() {
+    const bookName = this.data.data.name;
+    if (bookName) {
+      const db = wx.cloud.database();
+      db.collection('user-book').add({
+        data: {
+          bookName: bookName
+        },
+        success: res => {
+          wx.showToast({
+            icon: 'none',
+            title: '收藏成功',
+          })
+          this.setData({
+            like: !this.data.like
+          })
+        },
+        fail: err => {
+          console.log(err);
+          wx.showToast({
+            icon: 'none',
+            title: '收藏失败，请重试'
+          })
+        }
+      })
+    } else {
+      wx.showToast({
+        icon: 'none',
+        title: '收藏失败，请重试'
+      })
+    }
+  },
+
+  /**
+   * removeBook
+   */
+  removeBook: function() {
+    const db = wx.cloud.database();
+    const openid = app.globalData.openid;
+    const bookName = this.data.data.name;
+    db.collection('user-book').where({
+      _openid: openid,
+      bookName: bookName
+    }).get({
+      success: res => {
+        if (res.data.length > 0) {
+          const obj = res.data[0];
+          db.collection('user-book')
+            .doc(obj._id)
+            .remove({
+              success: res => {
+                wx.showToast({
+                  icon: 'none',
+                  title: '取消收藏...',
+                })
+                this.setData({
+                  like: !this.data.like
+                })
+              },
+              fail: err => {
+                console.log(err);
+                wx.showToast({
+                  icon: 'none',
+                  title: '操作失败，请重试！'
+                })
+              }
+            })
+        }
+      },
+      fail: err => {
+        wx.showToast({
+          icon: 'none',
+          title: '操作失败，请重试！'
+        })
+      }
+    });
+
   }
 })
