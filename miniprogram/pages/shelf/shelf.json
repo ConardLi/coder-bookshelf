@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "书架",
   "usingComponents": {
-    "wux-button": "../../component/button/index"
+    "wux-button": "../../component/button/index",
+    "user-auth":"../../common/user-auth/index"
   }
 }

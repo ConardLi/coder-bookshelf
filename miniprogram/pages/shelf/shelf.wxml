@@ -9,10 +9,12 @@
   </view>
 
   <view class='book' style="display:{{list.length>0?'flex':'none'}};">
-    <view class='bookContainer' wx:for="{{list}}" wx:for-item="item">
+    <view class='bookContainer' wx:for="{{list}}" wx:for-item="item" wx:key="index">
       <image class='bookImg' src='../../images/book/{{item.name}}.jpg'></image>
       <text class='bookText'>{{item.name}}</text>
     </view>
   </view>
+
+  <user-auth id="auth" bind:authCallback="authCallback"></user-auth>
 
 </view>
