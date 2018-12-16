@@ -20,16 +20,29 @@ Component({
    */
   methods: {
     getUserInfo(e) {
-      this.toggle(false);
+      if (e.detail.userInfo) {
+        this.triggerEvent("authCallback", { userInfo : e.detail.userInfo});
+      }else{
+        this.triggerEvent("authCallback", false);
+        this.hide();
+      }
     },
+
     returnHome() {
       wx.switchTab({
         url: '../../pages/search/search'
       });
     },
-    toggle(value) {
+
+    show() {
       this.setData({
-        show: value
+        show: true
+      });
+    },
+
+    hide() {
+      this.setData({
+        show: false
       });
     }
   }
