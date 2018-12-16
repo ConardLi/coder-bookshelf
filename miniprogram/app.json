@@ -2,9 +2,9 @@
   "pages": [
     "pages/search/search",
     "pages/shelf/shelf",
+    "pages/index/index",
     "pages/detail/detail",
     "pages/bookList/bookList",
-    "pages/index/index",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
