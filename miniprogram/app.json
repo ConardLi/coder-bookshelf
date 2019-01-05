@@ -1,8 +1,9 @@
 {
   "pages": [
+    "pages/management/management",
+    "pages/index/index",
     "pages/search/search",
     "pages/shelf/shelf",
-    "pages/index/index",
     "pages/detail/detail",
     "pages/bookList/bookList",
     "pages/userConsole/userConsole",

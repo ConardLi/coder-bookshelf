@@ -1,0 +1,19 @@
+<!--miniprogram/pages/management/management.wxml-->
+<view class='head'>
+  <text>书籍录入</text>
+</view>
+
+<wux-cell>
+  <wux-input label="书籍名称" placeholder="请输入书籍名称" bind:change="nameChange" />
+</wux-cell>
+<wux-cell>
+  <wux-input label="作者" placeholder="请输入作者" bind:change="authorChange" />
+</wux-cell>
+<wux-cell>
+  <wux-input label="标签" placeholder="请输入标签" bind:change="tagChange" />
+</wux-cell>
+
+<wux-button block type="positive" bindtap='submit'>确定录入</wux-button>
+
+<wux-toast id="wux-toast" />
+<wux-loading id="wux-loading" />
