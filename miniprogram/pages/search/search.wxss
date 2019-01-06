@@ -15,3 +15,7 @@
 	transform-origin: 0 100%;
 	transform: scaleY(0.5);
 }
+
+.content{
+  height: 80vh;
+}

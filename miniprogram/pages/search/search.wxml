@@ -8,7 +8,7 @@
       <wux-tab key="tab2" title="资料"></wux-tab>
     </block>
   </wux-tabs>
-  <swiper current="{{ index }}" bindchange="onSwiperChange">
+  <swiper class='content' current="{{ index }}" bindchange="onSwiperChange">
     <block>
       <swiper-item>
         <view class="content">
