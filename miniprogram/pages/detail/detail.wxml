@@ -39,6 +39,7 @@
 
 <wux-toast id="wux-toast" />
 <wux-loading id="wux-loading" />
+
 <wux-row class="pcon" style="display:{{showPro?'block':'none'}};">
   <wux-row style="margin:10px">
     <text class="pTitle">正在下载书籍 </text>

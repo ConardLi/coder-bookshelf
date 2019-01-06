@@ -109,6 +109,7 @@
   width: 100%;
   background: rgba(0, 0, 0, 0.568);
   text-align: center;
+  z-index: 1000;
 }
 
 .pTitle {
