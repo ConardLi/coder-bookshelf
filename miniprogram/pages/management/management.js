@@ -56,7 +56,6 @@ Page({
           color: '#fff',
           text: '成功！',
         })
-
       } catch (e) {
         $wuxToast().show({
           duration: 1500,
@@ -84,7 +83,8 @@ Page({
       const db = wx.cloud.database();
       db.collection('tag').add({
         data: {
-          name:tag
+          name:tag,
+          type: 'book'
         },
         success: res => {
           $wuxLoading().hide();
