@@ -1,10 +1,10 @@
 /* pages/search/tag/tag.wxss */
 
-.container{
-  width: 60px;
+.container {
+  width: 80px;
   height: 60px;
   padding-top: 5px;
-  box-shadow: 4px 4px 2px  #888888;
+  box-shadow: 4px 4px 2px #888;
   border: 1px solid rgb(122, 122, 122);
   display: inline-block;
   margin: 10px;
@@ -12,16 +12,18 @@
   border-radius: 3px;
 }
 
-.icon{
+.icon {
   height: 40px;
   width: 40px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
-.tagName{
+.tagName {
   font-size: 14px;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
   bottom: 0px;
+  word-break: keep-all;
+  word-wrap: break-word;
 }
