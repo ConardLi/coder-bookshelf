@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+      "wux-toast": "../../component/toast/index",
+      "wux-loading": "../../component/loading/index",
+      "wux-button": "../../component/button/index",
+      "source-item": "../../common/source-item/source-item"
+    }
+}

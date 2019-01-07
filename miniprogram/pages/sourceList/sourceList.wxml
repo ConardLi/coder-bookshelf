@@ -1,0 +1,16 @@
+<!--miniprogram/pages/bookList/bookList.wxml-->
+<view>
+  <source-item wx:for="{{list}}" wx:for-item="item" wx:key="{{item.id}}" data="{{item}}"></source-item>
+
+  <wux-toast id="wux-toast" />
+  <wux-loading id="wux-loading" />
+
+  <view class='noBook' style="display:{{no?'flex':'none'}};">
+    <image class='icon' src='../../images/page/404.png'></image>
+    <text class='noText'>没找到您想要的～</text>
+    <wux-button class='noBtn' size="small" outline type="positive">
+      <text space="ensp" bindlongtap='toSearch'>   联系开发者找资源   </text>
+    </wux-button>
+  </view>
+
+</view>
