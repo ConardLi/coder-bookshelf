@@ -29,7 +29,7 @@ Component({
      */
     handleDetail: function() {
       wx.navigateTo({
-        url: '../../pages/detail/detail?data=' + JSON.stringify(this.properties.data)
+        url: '../../pages/sourceDetail/sourceDetail?data=' + JSON.stringify(this.properties.data)
       })
     }
   },
