@@ -1,0 +1,140 @@
+/* miniprogram/pages/detail/detail.wxss */
+
+.con {
+  background-color: #f6f6f6;
+  height: 230px;
+  position: relative;
+  z-index: 1;
+}
+
+.imgcon {
+  width: 160px;
+  margin: 0 auto;
+}
+
+.bookImg {
+  width: 160px;
+  height: 208px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 2px #888;
+}
+
+.foorter {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  /* border-top: 1px solid #cfcece; */
+  bottom: 0px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 14px;
+}
+
+.share {
+  height: 50px;
+  width: 100px;
+  right: 0px;
+  position: absolute;
+  border-radius: 0px;
+}
+
+.read {
+  background: rgb(255, 143, 69);
+  height: 50px;
+  position: absolute;
+  left: 100px;
+  right: 100px;
+  color: white;
+  font-size: 16px;
+}
+
+.like {
+  height: 50px;
+  width: 100px;
+  left: 0px;
+  position: absolute;
+}
+
+.prop {
+  height: 50px;
+  border-bottom: 1px solid #f6f6f6;
+  /* line-height: 50px; */
+  font-size: 14px;
+  padding: 0px;
+}
+
+.icon {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin: 15px;
+}
+
+.con2 {
+  width: 70px;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+}
+
+.con3 {
+  position: absolute;
+  left: 120px;
+  line-height: 50px;
+  right: 0px;
+  color: #505050;
+  font-family: '微软雅黑';
+}
+
+.likeIcon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.likeText {
+  position: absolute;
+  left: 40px;
+  top: 7px;
+  font-size: 14px;
+}
+
+.pcon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 230px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.568);
+  text-align: center;
+  z-index: 1000;
+}
+
+.pTitle {
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 100px;
+}
+
+.pText {
+  font-size: 12px;
+  color: #d6d6d6;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.auth {
+  background-color: #000000ad;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

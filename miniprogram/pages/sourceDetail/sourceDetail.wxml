@@ -1,0 +1,45 @@
+<view class='con'>
+
+  <!-- <view class='imgcon'>
+    <image wx:if="{{data.name}}" class='bookImg' src='{{pre}}/book/{{data.name}}.jpg'></image>
+  </view> -->
+
+</view>
+
+<view class='prop'>
+  <image class='icon' src='../../images/page/book.png'></image>
+  <text class='con2'>名称：</text>
+  <text class='con3'>{{data.name}}</text>
+</view>
+
+<view class='prop'>
+  <image class='icon' src='../../images/page/分类.png'></image>
+  <text class='con2'>分类：</text>
+  <text class='con3'>资源</text>
+</view>
+
+<view class='prop'>
+  <image class='icon' src='../../images/page/标签.png'></image>
+  <text class='con2'>标签：</text>
+  <text class='con3'>{{data.tag}}</text>
+</view>
+
+
+<view class='prop'>
+  <image class='icon' src='../../images/page/推荐.png'></image>
+  <text class='con2'>推荐阅读：</text>
+  <text class='con3'>原型和原型链</text>
+</view>
+
+<wux-toast id="wux-toast" />
+<wux-loading id="wux-loading" />
+
+<view class='foorter'>
+  <view bindtap='handleRead' class='read'>
+    复制链接
+  </view>
+  <button class='share' open-type='share'>
+    <image class='likeIcon' src="../../images/page/分享.png"></image>
+    <text class='likeText'>分享</text>
+  </button>
+</view>
