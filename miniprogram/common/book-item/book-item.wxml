@@ -1,0 +1,14 @@
+<!--component/book-Item/book-item.wxml-->
+<view class='con' bindtap='handleDetail'>
+  <view class='imgcon'>
+    <image class='bookImg' src='{{pre}}/book/{{data.name}}.jpg'></image>
+  </view>
+  <view class='txtcon'>
+    <text class='name'>
+  {{data.name}}
+  </text>
+    <text class='tag'>
+    作者：{{data.author}}   标签：{{data.tag}}
+    </text>
+  </view>
+</view>
