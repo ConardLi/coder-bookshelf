@@ -11,6 +11,10 @@ Component({
       type: String,
       value: '',
     },
+    type: {
+      type: String,
+      value: 'book',
+    },
   },
 
   /**
@@ -25,8 +29,12 @@ Component({
    */
   methods: {
     handleClick: function() {
+      let preUrl = '../../pages/bookList/bookList?tag=';
+      if (this.properties.type === 'data'){
+        preUrl = '../../pages/sourceList/sourceList?tag=';
+      }
       wx.navigateTo({
-        url: '../../pages/bookList/bookList?tag=' + this.properties.name,
+        url: preUrl + this.properties.name,
       })
     }
   },
