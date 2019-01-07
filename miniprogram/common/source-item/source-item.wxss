@@ -1,0 +1,38 @@
+/* component/book-Item/book-item.wxss */
+
+.bookImg{
+  width: 60px;
+  height: 80px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 2px  #888888;
+}
+
+.imgcon{
+  widows: 80px;
+  float: left;
+}
+
+.txtcon{
+  position: absolute;
+  left: 90px;
+  right: 10px;
+  height: 80px;
+  line-height: 12px;
+}
+
+.name{
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.tag{
+  font-size: 12px;
+  color: rgb(156, 156, 156);
+}
+
+.con{
+  padding: 10px;
+  position: relative;
+  height: 80px;
+  border-bottom: 2rpx solid #D9D9D9;
+}
