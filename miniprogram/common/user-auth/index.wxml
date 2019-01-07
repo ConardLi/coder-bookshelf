@@ -4,8 +4,8 @@
     <view class='imgCon'>
       <image class='authImg' src='/images/page/head.png'></image>
     </view>
-    <text  class='authTxt'>小程序需要您的授权才能提供更好的服务哦</text>
-    <button class='a-btn'  open-type="getUserInfo" bindgetuserinfo='getUserInfo'>授权登录</button>
+    <text class='authTxt'>小程序需要您的授权才能提供更好的服务哦</text>
+    <button class='a-btn' open-type="getUserInfo" bindgetuserinfo='getUserInfo'>授权登录</button>
     <button class='r-btn' bindtap='returnHome'>返回首页</button>
   </view>
 </view>
