@@ -1,0 +1,19 @@
+<!--miniprogram/pages/management/management.wxml-->
+<view class='head'>
+  <text>资源</text>
+</view>
+
+<wux-cell>
+  <wux-input label="资源名称" placeholder="请输入资源名称" bind:change="nameChange" />
+</wux-cell>
+<wux-cell>
+  <wux-input label="下载地址" placeholder="请输入下载地址" bind:change="valueChange" />
+</wux-cell>
+<wux-cell>
+  <wux-input label="标签" placeholder="请输入标签" bind:change="tagChange" />
+</wux-cell>
+
+<wux-button block type="positive" bindtap='submit'>确定录入</wux-button>
+
+<wux-toast id="wux-toast" />
+<wux-loading id="wux-loading" />
