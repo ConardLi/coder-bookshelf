@@ -1,11 +1,14 @@
 {
   "pages": [
+    "pages/search/search",
+    "pages/sourceManagement/sourceManagement",
     "pages/management/management",
     "pages/index/index",
-    "pages/search/search",
     "pages/shelf/shelf",
     "pages/detail/detail",
+    "pages/sourceDetail/sourceDetail",
     "pages/bookList/bookList",
+    "pages/sourceList/sourceList",
     "pages/userConsole/userConsole",
     "pages/storageConsole/storageConsole",
     "pages/databaseGuide/databaseGuide",
